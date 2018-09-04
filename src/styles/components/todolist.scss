@@ -1,19 +1,144 @@
-@import "../configs/config.scss";
+@import "../configs/colors.scss";
+@import "../configs/shadows.scss";
 
 .todolist {
   width: 50%;
   height: 100vh;
   z-index: 999;
 
-  .list {
+  .list-container {
     margin: auto;
     width: 65%;
-    height: 70vh;
-    background-color: $background;
-    border-radius: 15px;
+    max-height: 90vh;
+    position: relative;
 
-    ul li {
+    .list {
+      background-color: $whiteColor;
+      border-radius: 5px;
+      position: relative;
+      height: 100%;
+      z-index: 2;
+      @include shadowsButton(0px, 2px, 5px, 0px, $blueColor);
+      padding: 20px;
 
+      h2 {
+        font-family: Montserrat, arial, sans-serif;
+        text-align: center;
+        padding: 0 0 10px 0;
+        color: $blueColor;
+        font-size: 2em;
+        font-weight: 600;
+      }
+
+      p {
+        text-align: center;
+        font-size: .9em;
+        font-family: Montserrat, arial, sans-serif;
+        color: $blueColor;
+      }
+
+      ul {
+        margin-top: 20px;
+      }
+
+      ul li {
+        border-bottom: 1px solid $greyColor;
+        height: 60px;
+        width: 100%;
+        margin: auto;
+        line-height: 60px;
+        font-family: Montserrat, arial, sans-serif;
+      }
+
+      ul li:nth-child(1) {
+        border-top: 1px solid $greyColor;
+      }
+
+      .add-task-container {
+
+        margin-top: 20px;
+
+        input {
+          border: 0;
+          height: 40px;
+        }
+
+        input:nth-child(1) {
+          font-size: 1.3em;
+          flex: 1;
+          color: $blueColor;
+        }
+
+        ::placeholder {
+          color: $blueColor;
+          opacity: .8;
+        }
+
+        :-ms-input-placeholder {
+          color: $blueColor;
+          opacity: .8;
+        }
+
+        ::-ms-input-placeholder {
+          color: $blueColor;
+          opacity: .8;
+        }
+
+        input:nth-child(2) {
+          font-size: 1em;
+          background-color: $blueColor;
+          padding: 0 20px;
+          border-radius: 5px;
+          color: $whiteColor;
+          margin-left: 10px;
+        }
+      }
+
+      .add-task {
+        width: 30px;
+        height: 30px;
+        margin: 50px auto;
+        position: relative;
+        border: 0;
+        background-color: transparent;
+        display: block;
+
+        &:before, &:after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          top: 14px;
+          left: 0;
+          background-color: $blueColor;
+          border-radius: 2px;
+        }
+
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
+    .sub-layers {
+      position: absolute;
+      height: 50px;
+      background-color: $whiteColor;
+      border-radius: 5px;
+      @include shadowsButton(0px, 2px, 5px, 0px, $blueColor);
+    }
+
+    .sub-layer-1 {
+      bottom: -5px;
+      left: 3px;
+      right: 3px;
+      z-index: 1;
+    }
+
+    .sub-layer-2 {
+      bottom: -10px;
+      left: 6px;
+      right: 6px;
     }
   }
 }

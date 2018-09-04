@@ -14,7 +14,7 @@ class Navigation extends Component {
       <div className="navigation flex around column">
         <h1>Hello {this.state.name}</h1>
         <div className="user-infos">
-          <p>Vous n'avez aucune tâche de prévu</p>
+          <p>Vous n'avez aucune tâche de prévu.</p>
         </div>
         <nav>
           <ul>

@@ -1,0 +1,7 @@
+@mixin shadowsButton($x, $y, $blur, $distance, $color) {
+  -moz-box-shadow:    $x $y $blur $distance $color;
+  -webkit-box-shadow: $x $y $blur $distance $color;
+  -o-box-shadow:      $x $y $blur $distance $color;
+  box-shadow:         $x $y $blur $distance $color;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=$color, Direction=180, Strength=5);
+}

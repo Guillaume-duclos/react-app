@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 .flex {
   display: flex; }
@@ -27,6 +28,9 @@ a {
 li {
   list-style-type: none; }
 
+.pointer {
+  cursor: pointer; }
+
 .container {
   min-height: 100vh; }
 
@@ -46,25 +50,124 @@ body {
   width: 50%;
   height: 100vh;
   z-index: 999; }
-  .todolist .list {
+  .todolist .list-container {
     margin: auto;
     width: 65%;
-    height: 70vh;
-    background-color: #e8eaef;
-    border-radius: 15px; }
+    max-height: 90vh;
+    position: relative; }
+    .todolist .list-container .list {
+      background-color: #ffffff;
+      border-radius: 5px;
+      position: relative;
+      height: 100%;
+      z-index: 2;
+      -moz-box-shadow: 0px 2px 5px 0px #34495e;
+      -webkit-box-shadow: 0px 2px 5px 0px #34495e;
+      -o-box-shadow: 0px 2px 5px 0px #34495e;
+      box-shadow: 0px 2px 5px 0px #34495e;
+      filter: progid:DXImageTransform.Microsoft.Shadow(color=$color, Direction=180, Strength=5);
+      padding: 20px; }
+      .todolist .list-container .list h2 {
+        font-family: Montserrat, arial, sans-serif;
+        text-align: center;
+        padding: 0 0 10px 0;
+        color: #34495e;
+        font-size: 2em;
+        font-weight: 600; }
+      .todolist .list-container .list p {
+        text-align: center;
+        font-size: .9em;
+        font-family: Montserrat, arial, sans-serif;
+        color: #34495e; }
+      .todolist .list-container .list ul {
+        margin-top: 20px; }
+      .todolist .list-container .list ul li {
+        border-bottom: 1px solid #f4f5f8;
+        height: 60px;
+        width: 100%;
+        margin: auto;
+        line-height: 60px;
+        font-family: Montserrat, arial, sans-serif; }
+      .todolist .list-container .list ul li:nth-child(1) {
+        border-top: 1px solid #f4f5f8; }
+      .todolist .list-container .list .add-task-container {
+        margin-top: 20px; }
+        .todolist .list-container .list .add-task-container input {
+          border: 0;
+          height: 40px; }
+        .todolist .list-container .list .add-task-container input:nth-child(1) {
+          font-size: 1.3em;
+          flex: 1;
+          color: #34495e; }
+        .todolist .list-container .list .add-task-container ::placeholder {
+          color: #34495e;
+          opacity: .8; }
+        .todolist .list-container .list .add-task-container :-ms-input-placeholder {
+          color: #34495e;
+          opacity: .8; }
+        .todolist .list-container .list .add-task-container ::-ms-input-placeholder {
+          color: #34495e;
+          opacity: .8; }
+        .todolist .list-container .list .add-task-container input:nth-child(2) {
+          font-size: 1em;
+          background-color: #34495e;
+          padding: 0 20px;
+          border-radius: 5px;
+          color: #ffffff;
+          margin-left: 10px; }
+      .todolist .list-container .list .add-task {
+        width: 30px;
+        height: 30px;
+        margin: 50px auto;
+        position: relative;
+        border: 0;
+        background-color: transparent;
+        display: block; }
+        .todolist .list-container .list .add-task:before, .todolist .list-container .list .add-task:after {
+          content: '';
+          position: absolute;
+          height: 2px;
+          width: 100%;
+          top: 14px;
+          left: 0;
+          background-color: #34495e;
+          border-radius: 2px; }
+        .todolist .list-container .list .add-task:after {
+          transform: rotate(90deg); }
+    .todolist .list-container .sub-layers {
+      position: absolute;
+      height: 50px;
+      background-color: #ffffff;
+      border-radius: 5px;
+      -moz-box-shadow: 0px 2px 5px 0px #34495e;
+      -webkit-box-shadow: 0px 2px 5px 0px #34495e;
+      -o-box-shadow: 0px 2px 5px 0px #34495e;
+      box-shadow: 0px 2px 5px 0px #34495e;
+      filter: progid:DXImageTransform.Microsoft.Shadow(color=$color, Direction=180, Strength=5); }
+    .todolist .list-container .sub-layer-1 {
+      bottom: -5px;
+      left: 3px;
+      right: 3px;
+      z-index: 1; }
+    .todolist .list-container .sub-layer-2 {
+      bottom: -10px;
+      left: 6px;
+      right: 6px; }
 
 .navigation {
   width: 50%;
   height: 100vh;
-  color: #e8eaef;
-  font-family: Helvetica, arial, sans-serif; }
+  color: #ffffff;
+  font-family: Montserrat, arial, sans-serif; }
   .navigation h1 {
     font-size: 4em; }
   .navigation .user-infos {
-    text-align: center; }
+    text-align: center;
+    font-weight: 300; }
   .navigation nav {
     border: 0px solid black;
     padding: 10px 0; }
     .navigation nav ul li {
       margin: 15px 0;
-      font-size: 1.2em; }
+      font-size: 1.2em;
+      font-weight: 300; }

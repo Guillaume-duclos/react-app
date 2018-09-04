@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 .flex {
   display: flex; }
@@ -26,6 +27,9 @@ a {
 
 li {
   list-style-type: none; }
+
+.pointer {
+  cursor: pointer; }
 
 .container {
   min-height: 100vh; }
