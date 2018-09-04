@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex { display: flex; }
+.row { flex-direction: row; }
+.column { flex-direction: column; }
+.around { justify-content: space-around; }
+.between { justify-content: space-between; }
+.center { justify-content: center; }
+
+a { text-decoration: none; }
+li { list-style-type: none; }
+
+.container {
+  min-height: 100vh;
+}

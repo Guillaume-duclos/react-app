@@ -1,0 +1,10 @@
+.todolist {
+  width: 50%;
+  height: 100vh;
+  z-index: 999; }
+  .todolist .list {
+    margin: auto;
+    width: 65%;
+    height: 70vh;
+    background-color: #e8eaef;
+    border-radius: 15px; }

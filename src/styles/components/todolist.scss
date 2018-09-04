@@ -1,0 +1,19 @@
+@import "../configs/config.scss";
+
+.todolist {
+  width: 50%;
+  height: 100vh;
+  z-index: 999;
+
+  .list {
+    margin: auto;
+    width: 65%;
+    height: 70vh;
+    background-color: $background;
+    border-radius: 15px;
+
+    ul li {
+
+    }
+  }
+}

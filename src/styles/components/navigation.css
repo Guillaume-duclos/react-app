@@ -1,0 +1,15 @@
+.navigation {
+  width: 50%;
+  height: 100vh;
+  color: #e8eaef;
+  font-family: Helvetica, arial, sans-serif; }
+  .navigation h1 {
+    font-size: 4em; }
+  .navigation .user-infos {
+    text-align: center; }
+  .navigation nav {
+    border: 0px solid black;
+    padding: 10px 0; }
+    .navigation nav ul li {
+      margin: 15px 0;
+      font-size: 1.2em; }

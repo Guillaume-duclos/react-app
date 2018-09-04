@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.flex {
+  display: flex; }
+
+.row {
+  flex-direction: row; }
+
+.column {
+  flex-direction: column; }
+
+.around {
+  justify-content: space-around; }
+
+.between {
+  justify-content: space-between; }
+
+.center {
+  justify-content: center; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style-type: none; }
+
+.container {
+  min-height: 100vh; }
+
+body {
+  overflow: hidden; }
+
+.navigation, .todolist {
+  padding: 30px;
+  border: 0px solid red; }
+
+.container {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.todolist {
+  width: 50%;
+  height: 100vh;
+  z-index: 999; }
+  .todolist .list {
+    margin: auto;
+    width: 65%;
+    height: 70vh;
+    background-color: #e8eaef;
+    border-radius: 15px; }
+
+.navigation {
+  width: 50%;
+  height: 100vh;
+  color: #e8eaef;
+  font-family: Helvetica, arial, sans-serif; }
+  .navigation h1 {
+    font-size: 4em; }
+  .navigation .user-infos {
+    text-align: center; }
+  .navigation nav {
+    border: 0px solid black;
+    padding: 10px 0; }
+    .navigation nav ul li {
+      margin: 15px 0;
+      font-size: 1.2em; }
