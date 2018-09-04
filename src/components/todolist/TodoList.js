@@ -14,12 +14,21 @@ class TodoList extends Component {
   }
 
   addTask = (event) => {
-    console.log('Add task function');
-    event.preventDefault()
-    this.setState({
-      task: '',
-      tasks: [...this.state.tasks, this.state.task]
-    });
+    if(this.refs.newTaskInput.value !== "") {
+      console.log('Add task function');
+      event.preventDefault();
+      this.setState({
+        task: '',
+        tasks: [...this.state.tasks, this.state.task]
+      });
+      this.refs.newTaskInput.value = "";
+    }
+  }
+
+  deleteTask = (item, index) => {
+    let tasks = this.state.tasks.slice();
+    tasks.splice(index, 1);
+    this.setState({tasks});
   }
 
   render() {
@@ -28,10 +37,10 @@ class TodoList extends Component {
         <div className="list-container">
           <div className="list">
             <h2>Aujourd'hui</h2>
-            <p>0 taches à faire</p>
-            <Tasks tasks={this.state.tasks}/>
+            <p>{this.state.tasks.length} {this.state.tasks.length > 1 ? 'taches' : 'tache'} à faire</p>
+            <Tasks tasks={this.state.tasks} delete={this.deleteTask}/>
             <form className="add-task-container flex row between" onSubmit={this.addTask}>
-              <input type="text" placeholder="Votre nouvelle tache à réaliser" onChange={this.setNewTask}/>
+              <input type="text" placeholder="Votre nouvelle tache à réaliser" ref="newTaskInput" onChange={this.setNewTask}/>
               <input type="submit" value="Ajouter" className="pointer"/>
             </form>
           </div>

@@ -82,12 +82,22 @@ body {
       .todolist .list-container .list ul {
         margin-top: 20px; }
       .todolist .list-container .list ul li {
-        border-bottom: 1px solid #f4f5f8;
         height: 60px;
         width: 100%;
         margin: auto;
         line-height: 60px;
-        font-family: Montserrat, arial, sans-serif; }
+        font-family: Montserrat, arial, sans-serif;
+        border-bottom: 1px solid #f4f5f8;
+        /*button {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 1px solid red;
+          margin: auto;
+        }*/ }
+        .todolist .list-container .list ul li p {
+          flex: 1;
+          text-align: left; }
       .todolist .list-container .list ul li:nth-child(1) {
         border-top: 1px solid #f4f5f8; }
       .todolist .list-container .list .add-task-container {
@@ -101,13 +111,13 @@ body {
           color: #34495e; }
         .todolist .list-container .list .add-task-container ::placeholder {
           color: #34495e;
-          opacity: .8; }
+          opacity: .6; }
         .todolist .list-container .list .add-task-container :-ms-input-placeholder {
           color: #34495e;
-          opacity: .8; }
+          opacity: .6; }
         .todolist .list-container .list .add-task-container ::-ms-input-placeholder {
           color: #34495e;
-          opacity: .8; }
+          opacity: .6; }
         .todolist .list-container .list .add-task-container input:nth-child(2) {
           font-size: 1em;
           background-color: #34495e;
