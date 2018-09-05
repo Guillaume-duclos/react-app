@@ -9,26 +9,46 @@ class TodoList extends Component {
   }
 
   setNewTask = (event) => {
-    console.log('Set new task function');
     this.setState({task: event.target.value});
   }
 
   addTask = (event) => {
     if(this.refs.newTaskInput.value !== "") {
-      console.log('Add task function');
       event.preventDefault();
       this.setState({
         task: '',
         tasks: [...this.state.tasks, this.state.task]
       });
       this.refs.newTaskInput.value = "";
+      this.props.getStatus(this.state.tasks.length + 1);
     }
+  }
+
+  validetask = (item, index) => {
+
   }
 
   deleteTask = (item, index) => {
     let tasks = this.state.tasks.slice();
     tasks.splice(index, 1);
     this.setState({tasks});
+    this.props.getStatus(this.state.tasks.length - 1);
+  }
+
+  updateFilter = (filter) => {
+    switch (filter) {
+      case 'all':
+        filterClass
+        break;
+      case 'todo':
+
+        break;
+      case 'done':
+
+        break;
+      default:
+
+    }
   }
 
   render() {
@@ -38,6 +58,11 @@ class TodoList extends Component {
           <div className="list">
             <h2>Aujourd'hui</h2>
             <p>{this.state.tasks.length} {this.state.tasks.length > 1 ? 'taches' : 'tache'} à faire</p>
+            <ul className="filter-container flex row around">
+              <li className="pointer filter-active" onClick={() => this.updateFilter('all')}>Tout</li>
+              <li className="pointer" onClick={() => this.updateFilter('todo')}>Tache à faire</li>
+              <li className="pointer" onClick={() => this.updateFilter('done')}>Tache finit</li>
+            </ul>
             <Tasks tasks={this.state.tasks} delete={this.deleteTask}/>
             <form className="add-task-container flex row between" onSubmit={this.addTask}>
               <input type="text" placeholder="Votre nouvelle tache à réaliser" ref="newTaskInput" onChange={this.setNewTask}/>

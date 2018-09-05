@@ -37,34 +37,19 @@
         color: $blueColor;
       }
 
-      ul {
-        margin-top: 20px;
-      }
-
-      ul li {
-        height: 60px;
-        width: 100%;
-        margin: auto;
-        line-height: 60px;
+      .filter-container {
         font-family: Montserrat, arial, sans-serif;
-        border-bottom: 1px solid $greyColor;
+        padding: 20px 10px 15px 10px;
+        font-size: .8em;
 
-        p {
-          flex: 1;
-          text-align: left;
+        li {
+          padding: 5px 10px;
         }
 
-        /*button {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          border: 1px solid red;
-          margin: auto;
-        }*/
-      }
-
-      ul li:nth-child(1) {
-        border-top: 1px solid $greyColor;
+        .filter-active {
+          border: 1px solid $blueColor;
+          border-radius: 5px;
+        }
       }
 
       .add-task-container {
@@ -106,31 +91,6 @@
           margin-left: 10px;
         }
       }
-
-      .add-task {
-        width: 30px;
-        height: 30px;
-        margin: 50px auto;
-        position: relative;
-        border: 0;
-        background-color: transparent;
-        display: block;
-
-        &:before, &:after {
-          content: '';
-          position: absolute;
-          height: 2px;
-          width: 100%;
-          top: 14px;
-          left: 0;
-          background-color: $blueColor;
-          border-radius: 2px;
-        }
-
-        &:after {
-          transform: rotate(90deg);
-        }
-      }
     }
 
     .sub-layers {
@@ -142,14 +102,14 @@
     }
 
     .sub-layer-1 {
-      bottom: -5px;
+      bottom: -4px;
       left: 3px;
       right: 3px;
       z-index: 1;
     }
 
     .sub-layer-2 {
-      bottom: -10px;
+      bottom: -8px;
       left: 6px;
       right: 6px;
     }

@@ -9,12 +9,21 @@ class Navigation extends Component {
     }
   }
 
+  setStatus = () => {
+    if(this.props.getStatus === 0) {
+      return 'Vous n\'avez aucune tâche de prévu.';
+    } else if(this.props.getStatus > 0) {
+      return 'Il vous reste ' + this.props.getStatus + ' à faire.';
+    }
+  }
+
   render() {
+    console.log(this.props.getStatus);
     return (
       <div className="navigation flex around column">
         <h1>Hello {this.state.name}</h1>
         <div className="user-infos">
-          <p>Vous n'avez aucune tâche de prévu.</p>
+          <p>{this.setStatus()}</p>
         </div>
         <nav>
           <ul>

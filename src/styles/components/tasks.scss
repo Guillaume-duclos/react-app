@@ -1,0 +1,51 @@
+@import "../configs/colors.scss";
+
+.list-item {
+
+  li {
+    min-height: 60px;
+    width: 100%;
+    margin: auto;
+    border-bottom: 1px solid $greyColor;
+
+    p {
+      flex: 1;
+      text-align: left !important;
+      margin: auto;
+      line-height: 1.5em;
+      font-family: Montserrat, arial, sans-serif;
+    }
+
+    .fishedtask {
+      text-decoration: line-through;
+    }
+
+    button {
+      width: 15px;
+      height: 15px;
+      margin: auto 4px;
+      border: 2px solid;
+      background-color: transparent;
+      border-radius: 50%;
+      opacity: 0;
+      transition: .1s;
+    }
+
+    .valide-task-button {
+      border-color: #81c957;
+    }
+
+    .delete-task-button {
+      border-color: #ca5746;
+    }
+
+    &:hover button {
+      opacity: 1;
+      transition: .1s;
+    }
+  }
+
+  li:nth-child(1) {
+    border-top: 1px solid $greyColor;
+  }
+}

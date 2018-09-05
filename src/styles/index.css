@@ -44,7 +44,9 @@ body {
 .container {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-position: center;
+  background-size: cover;
+  transition: .5s; }
 
 .todolist {
   width: 50%;
@@ -79,27 +81,15 @@ body {
         font-size: .9em;
         font-family: Montserrat, arial, sans-serif;
         color: #34495e; }
-      .todolist .list-container .list ul {
-        margin-top: 20px; }
-      .todolist .list-container .list ul li {
-        height: 60px;
-        width: 100%;
-        margin: auto;
-        line-height: 60px;
+      .todolist .list-container .list .filter-container {
         font-family: Montserrat, arial, sans-serif;
-        border-bottom: 1px solid #f4f5f8;
-        /*button {
-          width: 30px;
-          height: 30px;
-          border-radius: 50%;
-          border: 1px solid red;
-          margin: auto;
-        }*/ }
-        .todolist .list-container .list ul li p {
-          flex: 1;
-          text-align: left; }
-      .todolist .list-container .list ul li:nth-child(1) {
-        border-top: 1px solid #f4f5f8; }
+        padding: 20px 10px 15px 10px;
+        font-size: .8em; }
+        .todolist .list-container .list .filter-container li {
+          padding: 5px 10px; }
+        .todolist .list-container .list .filter-container .filter-active {
+          border: 1px solid #34495e;
+          border-radius: 5px; }
       .todolist .list-container .list .add-task-container {
         margin-top: 20px; }
         .todolist .list-container .list .add-task-container input {
@@ -125,25 +115,6 @@ body {
           border-radius: 5px;
           color: #ffffff;
           margin-left: 10px; }
-      .todolist .list-container .list .add-task {
-        width: 30px;
-        height: 30px;
-        margin: 50px auto;
-        position: relative;
-        border: 0;
-        background-color: transparent;
-        display: block; }
-        .todolist .list-container .list .add-task:before, .todolist .list-container .list .add-task:after {
-          content: '';
-          position: absolute;
-          height: 2px;
-          width: 100%;
-          top: 14px;
-          left: 0;
-          background-color: #34495e;
-          border-radius: 2px; }
-        .todolist .list-container .list .add-task:after {
-          transform: rotate(90deg); }
     .todolist .list-container .sub-layers {
       position: absolute;
       height: 50px;
@@ -155,12 +126,12 @@ body {
       box-shadow: 0px 2px 5px 0px #34495e;
       filter: progid:DXImageTransform.Microsoft.Shadow(color=$color, Direction=180, Strength=5); }
     .todolist .list-container .sub-layer-1 {
-      bottom: -5px;
+      bottom: -4px;
       left: 3px;
       right: 3px;
       z-index: 1; }
     .todolist .list-container .sub-layer-2 {
-      bottom: -10px;
+      bottom: -8px;
       left: 6px;
       right: 6px; }
 
@@ -181,3 +152,36 @@ body {
       margin: 15px 0;
       font-size: 1.2em;
       font-weight: 300; }
+
+.list-item li {
+  min-height: 60px;
+  width: 100%;
+  margin: auto;
+  border-bottom: 1px solid #f4f5f8; }
+  .list-item li p {
+    flex: 1;
+    text-align: left !important;
+    margin: auto;
+    line-height: 1.5em;
+    font-family: Montserrat, arial, sans-serif; }
+  .list-item li .fishedtask {
+    text-decoration: line-through; }
+  .list-item li button {
+    width: 15px;
+    height: 15px;
+    margin: auto 4px;
+    border: 2px solid;
+    background-color: transparent;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .1s; }
+  .list-item li .valide-task-button {
+    border-color: #81c957; }
+  .list-item li .delete-task-button {
+    border-color: #ca5746; }
+  .list-item li:hover button {
+    opacity: 1;
+    transition: .1s; }
+
+.list-item li:nth-child(1) {
+  border-top: 1px solid #f4f5f8; }

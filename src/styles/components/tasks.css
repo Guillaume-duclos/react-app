@@ -1,0 +1,32 @@
+.list-item li {
+  min-height: 60px;
+  width: 100%;
+  margin: auto;
+  border-bottom: 1px solid #f4f5f8; }
+  .list-item li p {
+    flex: 1;
+    text-align: left !important;
+    margin: auto;
+    line-height: 1.5em;
+    font-family: Montserrat, arial, sans-serif; }
+  .list-item li .fishedtask {
+    text-decoration: line-through; }
+  .list-item li button {
+    width: 15px;
+    height: 15px;
+    margin: auto 4px;
+    border: 2px solid;
+    background-color: transparent;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .1s; }
+  .list-item li .valide-task-button {
+    border-color: #81c957; }
+  .list-item li .delete-task-button {
+    border-color: #ca5746; }
+  .list-item li:hover button {
+    opacity: 1;
+    transition: .1s; }
+
+.list-item li:nth-child(1) {
+  border-top: 1px solid #f4f5f8; }
