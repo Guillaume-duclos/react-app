@@ -1,6 +1,8 @@
 {
   "name": "react-app",
-  "version": "0.1.0",
+  "author": "Guillaume Duclos",
+  "licence": "MIT",
+  "version": "1.0.0",
   "private": true,
   "homepage": "https://guillaume-duclos.github.io/react-app/",
   "dependencies": {
@@ -21,7 +23,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm run build && git add -A && git commit -nm ':rocket: deploy ' && git push && git subtree push --prefix web origin gh-pages"
+    "deploy": "npm run build && git add -A && git commit -nm ':rocket: deploy' && git push && git subtree push --prefix web origin gh-pages"
   },
   "devDependencies": {
     "gh-pages": "^1.1.0"

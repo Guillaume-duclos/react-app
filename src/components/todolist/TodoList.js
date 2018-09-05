@@ -38,7 +38,7 @@ class TodoList extends Component {
   updateFilter = (filter) => {
     switch (filter) {
       case 'all':
-        filterClass
+
         break;
       case 'todo':
 
