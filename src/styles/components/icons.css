@@ -1,0 +1,19 @@
+.user-infos svg {
+  width: 150px;
+  margin-bottom: 20px; }
+
+.user-infos .sun-icon {
+  animation-name: sun-icon-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; }
+
+@keyframes sun-icon-animation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(180deg); } }
+
+.user-infos .time-icon {
+  animation-name: sun-icon-animation;
+  animation-duration: 3s;
+  animation-iteration-count: 1; }

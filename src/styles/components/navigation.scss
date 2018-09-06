@@ -23,6 +23,16 @@
       margin: 15px 0;
       font-size: 1.2em;
       font-weight: 300;
+      display: block;
+
+      a {
+        border: 0px solid red;
+        transition: .2s;
+      }
+
+      .current-page-link {
+        font-weight: 500;
+      }
     }
   }
 }

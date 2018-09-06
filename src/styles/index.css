@@ -23,7 +23,8 @@
   justify-content: center; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #ffffff; }
 
 li {
   list-style-type: none; }
@@ -45,8 +46,7 @@ body {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  transition: .5s; }
+  background-size: cover; }
 
 .todolist {
   width: 50%;
@@ -86,7 +86,8 @@ body {
         padding: 20px 10px 15px 10px;
         font-size: .8em; }
         .todolist .list-container .list .filter-container li {
-          padding: 5px 10px; }
+          padding: 5px 10px;
+          text-align: center; }
         .todolist .list-container .list .filter-container .filter-active {
           border: 1px solid #34495e;
           border-radius: 5px; }
@@ -151,7 +152,13 @@ body {
     .navigation nav ul li {
       margin: 15px 0;
       font-size: 1.2em;
-      font-weight: 300; }
+      font-weight: 300;
+      display: block; }
+      .navigation nav ul li a {
+        border: 0px solid red;
+        transition: .2s; }
+      .navigation nav ul li .current-page-link {
+        font-weight: 500; }
 
 .list-item li {
   min-height: 60px;
@@ -185,3 +192,23 @@ body {
 
 .list-item li:nth-child(1) {
   border-top: 1px solid #f4f5f8; }
+
+.user-infos svg {
+  width: 150px;
+  margin-bottom: 20px; }
+
+.user-infos .sun-icon {
+  animation-name: sun-icon-animation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite; }
+
+@keyframes sun-icon-animation {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(180deg); } }
+
+.user-infos .time-icon {
+  animation-name: sun-icon-animation;
+  animation-duration: 3s;
+  animation-iteration-count: 1; }

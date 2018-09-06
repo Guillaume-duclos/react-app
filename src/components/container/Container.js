@@ -16,7 +16,7 @@ class Container extends Component {
   render() {
     return (
       <div className="container flex row between">
-        <Navigation getStatus={this.state.status}/>
+        <Navigation page={this.props.page} getStatus={this.state.status}/>
         <TodoList getStatus={this.getStatus}/>
       </div>
     );

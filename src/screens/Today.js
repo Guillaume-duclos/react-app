@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import Container from '../components/container/Container';
 
-class Home extends Component {
+class Today extends Component {
   render() {
     return (
-      <Container page="home" class="home flex"/>
+      <Container page="today" class="home flex"/>
     );
   }
 }
 
-export default Home;
+export default Today;

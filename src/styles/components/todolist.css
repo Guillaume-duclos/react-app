@@ -36,7 +36,8 @@
         padding: 20px 10px 15px 10px;
         font-size: .8em; }
         .todolist .list-container .list .filter-container li {
-          padding: 5px 10px; }
+          padding: 5px 10px;
+          text-align: center; }
         .todolist .list-container .list .filter-container .filter-active {
           border: 1px solid #34495e;
           border-radius: 5px; }

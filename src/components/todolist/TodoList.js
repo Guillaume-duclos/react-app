@@ -5,7 +5,9 @@ class TodoList extends Component {
 
   state = {
     task: '',
-    tasks: []
+    tasks: [],
+    validateTasks: [],
+    filter: 'all'
   }
 
   setNewTask = (event) => {
@@ -24,8 +26,12 @@ class TodoList extends Component {
     }
   }
 
-  validetask = (item, index) => {
-
+  validateTask = (index) => {
+    console.log('Validate task : ' + index);
+    this.setState({
+      validateTasks: this.state.validateTasks.push(index)
+    });
+    console.log(this.state.validateTasks);
   }
 
   deleteTask = (item, index) => {
@@ -38,16 +44,16 @@ class TodoList extends Component {
   updateFilter = (filter) => {
     switch (filter) {
       case 'all':
-
+        this.setState({filter: 'all'});
         break;
       case 'todo':
-
+        this.setState({filter: 'todo'});
         break;
       case 'done':
-
+        this.setState({filter: 'done'});
         break;
       default:
-
+        this.setState({filter: 'all'});
     }
   }
 
@@ -59,11 +65,11 @@ class TodoList extends Component {
             <h2>Aujourd'hui</h2>
             <p>{this.state.tasks.length} {this.state.tasks.length > 1 ? 'taches' : 'tache'} à faire</p>
             <ul className="filter-container flex row around">
-              <li className="pointer filter-active" onClick={() => this.updateFilter('all')}>Tout</li>
-              <li className="pointer" onClick={() => this.updateFilter('todo')}>Tache à faire</li>
-              <li className="pointer" onClick={() => this.updateFilter('done')}>Tache finit</li>
+              <li className={this.state.filter === 'all'  ? 'filter filter-active' : 'pointer'}  onClick={() => this.updateFilter('all')}>Tout</li>
+              <li className={this.state.filter === 'todo' ? 'filter filter-active' : 'pointer'} onClick={() => this.updateFilter('todo')}>Tache à faire</li>
+              <li className={this.state.filter === 'done' ? 'filter filter-active' : 'pointer'} onClick={() => this.updateFilter('done')}>Tache finit</li>
             </ul>
-            <Tasks tasks={this.state.tasks} delete={this.deleteTask}/>
+            <Tasks tasks={this.state.tasks} validateTask={this.validateTask} delete={this.deleteTask}/>
             <form className="add-task-container flex row between" onSubmit={this.addTask}>
               <input type="text" placeholder="Votre nouvelle tache à réaliser" ref="newTaskInput" onChange={this.setNewTask}/>
               <input type="submit" value="Ajouter" className="pointer"/>

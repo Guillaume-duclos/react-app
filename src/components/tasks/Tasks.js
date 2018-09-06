@@ -3,9 +3,8 @@ import React, {Component} from 'react';
 
 class Tasks extends Component {
 
-  valideTask = (index) => {
-    //this.refs.index.style.textDecoration = "line-through";
-    console.log(this.refs.index);
+  validateTask = (index) => {
+    this.props.validateTask(index);
   }
 
   render() {
@@ -14,7 +13,7 @@ class Tasks extends Component {
         {this.props.tasks.map((item, index) =>
           <li key={index} className="flex row between">
             <p ref={index}>{item}</p>
-            <button className="valide-task-button pointer" onClick={() => this.valideTask(index)}></button>
+            <button className="valide-task-button pointer" onClick={() => this.validateTask(index)}></button>
             <button className="delete-task-button pointer" onClick={() => this.props.delete(item, index)}></button>
           </li>
         )}

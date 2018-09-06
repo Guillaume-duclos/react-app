@@ -23,7 +23,8 @@
   justify-content: center; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #ffffff; }
 
 li {
   list-style-type: none; }
