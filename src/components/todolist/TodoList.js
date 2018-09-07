@@ -27,17 +27,15 @@ class TodoList extends Component {
   }
 
   validateTask = (index) => {
-    console.log('Validate task : ' + index);
-
     if(this.state.validateTasks.includes(index)) {
-      console.log('Déjà dans le tableau');
       let value = this.state.validateTasks.indexOf(index);
       if (value !== -1) {
         this.state.validateTasks.splice(value, 1);
       }
     } else {
-      this.state.validateTasks.push(index);
-      console.log(this.state.validateTasks);
+      this.setState(prevState => ({
+        validateTasks: [...prevState.validateTasks, index]
+      }))
     }
   }
 
@@ -74,7 +72,7 @@ class TodoList extends Component {
       <div className="todolist flex center column">
         <div className="list-container">
           <div className="list">
-            <h2>Aujourd'hui</h2>
+            <h2>{this.props.day}</h2>
             <p>{this.state.tasks.length} {this.state.tasks.length > 1 ? 'taches' : 'tache'} à faire</p>
             <ul className="filter-container flex row around">
               <li className={this.state.filter === 'all'  ? 'filter filter-active' : 'pointer'} onClick={() => this.updateFilter('all')}>Tout</li>

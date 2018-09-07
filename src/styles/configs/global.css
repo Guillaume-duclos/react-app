@@ -1,6 +1,3 @@
-body {
-  overflow: hidden; }
-
 .navigation, .todolist {
   padding: 30px;
   border: 0px solid red; }

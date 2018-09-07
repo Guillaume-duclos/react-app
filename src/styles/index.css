@@ -22,6 +22,9 @@
 .center {
   justify-content: center; }
 
+.wrap {
+  flex-wrap: wrap; }
+
 a {
   text-decoration: none;
   color: #ffffff; }
@@ -34,9 +37,6 @@ li {
 
 .container {
   min-height: 100vh; }
-
-body {
-  overflow: hidden; }
 
 .navigation, .todolist {
   padding: 30px;
