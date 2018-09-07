@@ -4,7 +4,6 @@
   z-index: 999; }
   .todolist .list-container {
     margin: auto;
-    width: 65%;
     max-height: 90vh;
     position: relative; }
     .todolist .list-container .list {
@@ -49,7 +48,8 @@
         .todolist .list-container .list .add-task-container input:nth-child(1) {
           font-size: 1.3em;
           flex: 1;
-          color: #34495e; }
+          color: #34495e;
+          border: 0px solid red; }
         .todolist .list-container .list .add-task-container ::placeholder {
           color: #34495e;
           opacity: .6; }

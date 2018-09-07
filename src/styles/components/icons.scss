@@ -5,20 +5,14 @@
     margin-bottom: 20px;
   }
 
-  .sun-icon {
-    animation-name: sun-icon-animation;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-
-  @keyframes sun-icon-animation {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(180deg); }
-  }
-
-  .time-icon {
-    animation-name: sun-icon-animation;
-    animation-duration: 3s;
+  #sun-icon {
+    animation-name: sunIconAnimation;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
+  }
+
+  @keyframes sunIconAnimation {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
   }
 }

@@ -9,14 +9,13 @@ class Container extends Component {
   }
 
   getStatus = (status) => {
-    console.log('Container : nombre de todo = ' + status);
     this.setState({status});
   }
 
   render() {
     return (
       <div className="container flex row between">
-        <Navigation page={this.props.page} getStatus={this.state.status}/>
+        <Navigation today={this.props.today} thisweek={this.props.thisweek} getStatus={this.state.status}/>
         <TodoList getStatus={this.getStatus}/>
       </div>
     );

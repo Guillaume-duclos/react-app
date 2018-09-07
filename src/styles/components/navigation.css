@@ -17,7 +17,6 @@
       font-weight: 300;
       display: block; }
       .navigation nav ul li a {
-        border: 0px solid red;
-        transition: .2s; }
+        border: 0px solid red; }
       .navigation nav ul li .current-page-link {
         font-weight: 500; }

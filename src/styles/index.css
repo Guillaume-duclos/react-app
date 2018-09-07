@@ -54,7 +54,6 @@ body {
   z-index: 999; }
   .todolist .list-container {
     margin: auto;
-    width: 65%;
     max-height: 90vh;
     position: relative; }
     .todolist .list-container .list {
@@ -99,7 +98,8 @@ body {
         .todolist .list-container .list .add-task-container input:nth-child(1) {
           font-size: 1.3em;
           flex: 1;
-          color: #34495e; }
+          color: #34495e;
+          border: 0px solid red; }
         .todolist .list-container .list .add-task-container ::placeholder {
           color: #34495e;
           opacity: .6; }
@@ -155,8 +155,7 @@ body {
       font-weight: 300;
       display: block; }
       .navigation nav ul li a {
-        border: 0px solid red;
-        transition: .2s; }
+        border: 0px solid red; }
       .navigation nav ul li .current-page-link {
         font-weight: 500; }
 
@@ -171,8 +170,9 @@ body {
     margin: auto;
     line-height: 1.5em;
     font-family: Montserrat, arial, sans-serif; }
-  .list-item li .fishedtask {
-    text-decoration: line-through; }
+  .list-item li .finished-task {
+    text-decoration: line-through;
+    transition: .3s; }
   .list-item li button {
     width: 15px;
     height: 15px;
@@ -197,18 +197,13 @@ body {
   width: 150px;
   margin-bottom: 20px; }
 
-.user-infos .sun-icon {
-  animation-name: sun-icon-animation;
-  animation-duration: 3s;
-  animation-iteration-count: infinite; }
+.user-infos #sun-icon {
+  animation-name: sunIconAnimation;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1; }
 
-@keyframes sun-icon-animation {
+@keyframes sunIconAnimation {
   from {
     transform: rotate(0deg); }
   to {
-    transform: rotate(180deg); } }
-
-.user-infos .time-icon {
-  animation-name: sun-icon-animation;
-  animation-duration: 3s;
-  animation-iteration-count: 1; }
+    transform: rotate(360deg); } }

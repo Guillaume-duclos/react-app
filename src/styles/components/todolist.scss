@@ -8,7 +8,6 @@
 
   .list-container {
     margin: auto;
-    width: 65%;
     max-height: 90vh;
     position: relative;
 
@@ -66,6 +65,7 @@
           font-size: 1.3em;
           flex: 1;
           color: $blueColor;
+          border: 0px solid red;
         }
 
         ::placeholder {

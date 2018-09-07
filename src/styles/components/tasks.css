@@ -9,8 +9,9 @@
     margin: auto;
     line-height: 1.5em;
     font-family: Montserrat, arial, sans-serif; }
-  .list-item li .fishedtask {
-    text-decoration: line-through; }
+  .list-item li .finished-task {
+    text-decoration: line-through;
+    transition: .3s; }
   .list-item li button {
     width: 15px;
     height: 15px;

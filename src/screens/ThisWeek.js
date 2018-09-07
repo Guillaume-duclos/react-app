@@ -4,7 +4,7 @@ import Container from '../components/container/Container';
 class ThisWeek extends Component {
   render() {
     return (
-      <Container page="thisweek" class="home flex"/>
+      <Container thisweek class="home flex"/>
     );
   }
 }

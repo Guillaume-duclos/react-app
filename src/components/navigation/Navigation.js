@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SunIcon from '../icons/SunIcon';
 import TimeIcon from '../icons/TimeIcon';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class Navigation extends Component {
 
@@ -15,7 +16,9 @@ class Navigation extends Component {
   setStatus = () => {
     if(this.props.getStatus === 0) {
       return 'Vous n\'avez aucune tâche de prévu.';
-    } else if(this.props.getStatus > 0) {
+    } else if(this.props.getStatus === 1) {
+      return 'Il vous reste ' + this.props.getStatus + ' tache à faire.';
+    } else {
       return 'Il vous reste ' + this.props.getStatus + ' taches à faire.';
     }
   }
@@ -39,13 +42,10 @@ class Navigation extends Component {
         <nav>
           <ul>
             <li>
-              <Link className={this.props.page === 'home' ? 'current-page-link' : ''} to="/Home">Accueil</Link>
+              <Link className={this.props.today ? 'current-page-link' : ''} to="/Today">Aujourd'hui</Link>
             </li>
             <li>
-              <Link className={this.props.page === 'today' ? 'current-page-link' : ''} to="/Today">Aujourd'hui</Link>
-            </li>
-            <li>
-              <Link className={this.props.page === 'thisweek' ? 'current-page-link' : ''} to="/ThisWeek">Cette semaine</Link>
+              <Link className={this.props.thisweek ? 'current-page-link' : ''} to="/ThisWeek">Cette semaine</Link>
             </li>
           </ul>
         </nav>
@@ -53,5 +53,10 @@ class Navigation extends Component {
     );
   }
 }
+
+Navigation.propTypes = {
+  today: PropTypes.bool,
+  thisweek: PropTypes.bool
+};
 
 export default Navigation;

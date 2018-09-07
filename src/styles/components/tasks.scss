@@ -16,8 +16,9 @@
       font-family: Montserrat, arial, sans-serif;
     }
 
-    .fishedtask {
+    .finished-task {
       text-decoration: line-through;
+      transition: .3s;
     }
 
     button {

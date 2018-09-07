@@ -2,18 +2,13 @@
   width: 150px;
   margin-bottom: 20px; }
 
-.user-infos .sun-icon {
-  animation-name: sun-icon-animation;
-  animation-duration: 3s;
-  animation-iteration-count: infinite; }
+.user-infos #sun-icon {
+  animation-name: sunIconAnimation;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1; }
 
-@keyframes sun-icon-animation {
+@keyframes sunIconAnimation {
   from {
     transform: rotate(0deg); }
   to {
-    transform: rotate(180deg); } }
-
-.user-infos .time-icon {
-  animation-name: sun-icon-animation;
-  animation-duration: 3s;
-  animation-iteration-count: 1; }
+    transform: rotate(360deg); } }
